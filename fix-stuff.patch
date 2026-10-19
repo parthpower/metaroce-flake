@@ -1,0 +1,37 @@
+diff --git a/libsoftmetaroce/RenamedFlag.h b/libsoftmetaroce/RenamedFlag.h
+index b0dc757..1a31276 100644
+--- a/libsoftmetaroce/RenamedFlag.h
++++ b/libsoftmetaroce/RenamedFlag.h
+@@ -17,6 +17,7 @@
+ #pragma once
+ 
+ #include <fmt/core.h>
++#include <fmt/format.h>
+ #include <gflags/gflags.h>
+ #include <glog/logging.h>
+ #include <stdexcept>
+diff --git a/libsoftmetaroce/codec/AckHeader.h b/libsoftmetaroce/codec/AckHeader.h
+index b6ce598..a26007c 100644
+--- a/libsoftmetaroce/codec/AckHeader.h
++++ b/libsoftmetaroce/codec/AckHeader.h
+@@ -19,6 +19,7 @@
+ #include <libsoftmetaroce/codec/Header.h>
+ #include <cstdint>
+ #include <optional>
++#include <gflags/gflags.h>
+ 
+ DECLARE_int32(libsoftmetaroce_min_rnr_backoff_us);
+ 
+diff --git a/rdma_gen/RdmaGenEndpoint.cpp b/rdma_gen/RdmaGenEndpoint.cpp
+index 237912c..8d40ce5 100644
+--- a/rdma_gen/RdmaGenEndpoint.cpp
++++ b/rdma_gen/RdmaGenEndpoint.cpp
+@@ -15,7 +15,7 @@
+  */
+ 
+ #include "rdma_gen/RdmaGenEndpoint.h"
+-
++#include <gflags/gflags.h>
+ #include <infiniband/verbs.h>
+ #include <algorithm>
+ #include <cstdint>
